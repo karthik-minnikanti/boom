@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.min.css">
+</head>
+<script defer>
+    const ROOM_ID = "<%=roomId %>"
+</script>
+<script src='peer.js'></script>
+
+<script src="/socket.io/socket.io.js" defer>
+
+</script>
+<script src='script.js' defer></script>
+<style>
+    /* #video-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,300px);
+        grid-auto-rows: 300px;
+    }
+    video{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+    #video-grid {
+        margin-top: 560px;
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+  height: 100%;
+  justify-items: baseline;
+  position: static;
+}
+
+#video-grid > video {
+    
+  background-color: #f1f1f1;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . ." ". . . ." "video-grid video-grid video-grid .";
+}
+
+.video-grid { grid-area: video-grid; } */
+</style>
+<body>
+    
+    <div class="chat">
+    <div class="chat__sidebar" id="chat__sidebar">
+
+    </div>
+    <form action="" id='msg'>
+        <input type="text" placeholder="Message">
+        <input type="submit">
+    </form>
+    <div id='msg1'>
+
+    </div>
+    
+    
+    <div id="video-grid"></div>
+   
+</div>
+</body>
+</html>
